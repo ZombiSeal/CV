@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat:wght@300&display=swap');
+
+@import url(null.css);
+@import url(header.css);
+@import url(main.css);
+@import url(information.css);
+
+:root {
+    --color-dark: #000;
+    --color-light: #E9E9E9;
+    --main-font-family: 'Montserrat', sans-serif;
+    --title-font-family: 'Lato', sans-serif;
+    --title-font-weight: 700;
+    --regular-size: 1.5vw;
+    --square-size: 15px;
+}
+
+html {
+    font-size: var(--regular-size);
+}
+
+body {
+    font-family: var(--main-font-family);
+    font-size: var(--regular-size);
+    overflow-x: hidden;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: var(--title-font-family);
+    font-weight: var(--title-font-weight);
+    font-size: 9vw;
+    line-height: 10vw;
+}
+ 
+h2 {
+    font-family: var(--title-font-family);
+    font-size: 4vw;
+    font-weight: var(--title-font-weight);
+    text-transform: uppercase;
+} 
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 991.98px) {
+    body {
+        --regular-size: 18px;
+        font-size: var(--regular-size);
+    }
+    
+    h1 {
+        font-size: 68px;
+        line-height: 82px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    body {
+        --regular-size: 16px;
+        font-size: var(--regular-size);
+    }
+}
+
+
+
+
+
+
+  
+

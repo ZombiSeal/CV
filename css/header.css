@@ -1,0 +1,130 @@
+.header {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+
+    .header {
+        position: sticky;
+        z-index: 5;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        padding: 0 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .menu-icon span,
+    .menu-icon::before,
+    .menu-icon::after {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+        content: "";
+    }
+
+    .menu-icon::before {
+        top: 0;
+    }
+
+
+    .menu-icon::after {
+        bottom: 0;
+    }
+
+    .menu-icon span {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .menu-icon_active span {
+        transform: translate(100%, -50%);
+        opacity: 0;
+    }
+
+    .menu-icon_active::before {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .menu-icon_active::after {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        transform: translate(100%, 50px);
+
+        font-size: 24px;
+        color: var(--color-light);
+        text-transform: uppercase;
+        background: var(--color-dark);
+        padding: 70px;
+        overflow: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav_active {
+        transform: translate(0, 50px);
+    }
+
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin: 20px 0 0 0;
+    }
+
+    .nav__item:first-child {
+        margin: 0;
+    }
+
+    .nav__link::before,
+    .nav__link::after {
+        --square-size: 10px;
+        content: "";
+        display: inline-block;
+        width: var(--square-size);
+        height: var(--square-size);
+        background: var(--color-light);
+    }
+
+    .nav__link::before {
+        margin: 0 15px 0 0;
+    }
+
+    .nav__link::after {
+        margin: 0 0 0 15px;
+    }
+}
